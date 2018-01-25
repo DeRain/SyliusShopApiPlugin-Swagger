@@ -1,5 +1,7 @@
 ## Version 1.0.0
 
+https://github.com/Sylius/SyliusShopApiPlugin
+
 ### Install dependencies
 `npm install`  
 
