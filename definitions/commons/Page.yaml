@@ -1,0 +1,39 @@
+title: "Page"
+type: "object"
+description: "Generic page object."
+properties:
+    page:
+        description: "Current page number."
+        type: "integer"
+        example: 1
+    limit:
+        description: "Number of items per page."
+        type: "integer"
+        example: 10
+    pages:
+        description: "Number of available pages for given limit."
+        type: "object"
+        example: 3
+    total:
+        description: "Amount of all paginated resources."
+        type: "object"
+        example: 25
+    _links:
+        type: "object"
+        properties:
+            self:
+                description: "Link to the current page."
+                type: "integer"
+                example: "/shop-api/some-path?page=1&limit=10"
+            first:
+                description: "Link to the fist page."
+                type: "string"
+                example: "/shop-api/some-path?page=1&limit=10"
+            last:
+                description: "Link to the last page."
+                type: "string"
+                example: "/shop-api/some-path?page=1&limit=10"
+            next:
+                description: "Link to the next page."
+                type: "string"
+                example: "/shop-api/some-path?page=1&limit=10"

@@ -1,0 +1,25 @@
+get:
+    tags:
+    - "checkout"
+    summary: "Show checkout summary"
+    description: "This endpoint will show the summarized cart during checkout. This action is an equivalent of cart summarize action."
+    operationId: "checkoutSummarize"
+    consumes:
+    - "application/json"
+    produces:
+    - "application/json"
+    parameters:
+    - name: "token"
+      in: "path"
+      description: "Cart identifier."
+      required: true
+      type: "string"
+    responses:
+        200:
+            description: "Current state of the cart, with calculated prices and related items."
+            schema:
+                $ref: "#/definitions/Cart"
+        400:
+            description: "Invalid input (E.g. token has not been found)"
+            schema:
+                $ref: "#/definitions/GeneralError"

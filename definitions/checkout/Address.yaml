@@ -1,0 +1,24 @@
+title: "Address"
+type: "object"
+properties:
+    firstName:
+        type: "string"
+        example: "Sherlock"
+    lastName:
+        type: "string"
+        example: "Holmes"
+    countryCode:
+        type: "string"
+        example: "GB"
+    street:
+        type: "string"
+        example: "Baker Street 221b"
+    city:
+        type: "string"
+        example: "London"
+    postcode:
+        type: "string"
+        example: "NW1"
+    provinceName:
+        type: "string"
+        example: "Greater London"

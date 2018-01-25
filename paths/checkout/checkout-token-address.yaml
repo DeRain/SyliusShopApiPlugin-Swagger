@@ -1,0 +1,28 @@
+put:
+    tags:
+    - "checkout"
+    summary: "Address cart."
+    description: "This endpoint will allow you to add billing and shipping addresses to the cart and begin the checkout process. You can either define the same shipping and billing address or specify them separately."
+    operationId: "checkoutAddress"
+    consumes:
+    - "application/json"
+    produces:
+    - "application/json"
+    parameters:
+    - name: "token"
+      in: "path"
+      description: "Cart identifier."
+      required: true
+      type: "string"
+    - in: "body"
+      name: "content"
+      required: true
+      schema:
+          $ref: "#/definitions/CheckoutAddressRequest"
+    responses:
+        204:
+            description: "Cart has been addressed."
+        400:
+            description: "Invalid input, validation failed."
+            schema:
+                $ref: "#/definitions/GeneralError"

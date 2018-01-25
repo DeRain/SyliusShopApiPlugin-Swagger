@@ -1,0 +1,17 @@
+swagger: '2.0'
+host: "demo.sylius.org"
+basePath: "/shop-api"
+schemes:
+- "https"
+tags:
+  $ref: ./tags/index.yaml
+consumes:
+  $ref: ./commons.yaml#/defaultMediaTypes
+produces:
+  $ref: ./commons.yaml#/defaultMediaTypes
+info:
+  $ref: ./info/index.yaml
+paths:
+  $ref: ./paths/index.yaml
+definitions:
+  $ref: ./definitions/index.yaml

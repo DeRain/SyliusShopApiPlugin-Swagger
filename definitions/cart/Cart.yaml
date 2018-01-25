@@ -1,0 +1,118 @@
+title: "Cart"
+type: "object"
+description: "Cart with information about items, current state, totals and more."
+properties:
+    tokenValue:
+        type: "string"
+        example: "SDAOSLEFNWU35H3QLI5325"
+    channel:
+        type: "string"
+        example: "WEB_GB"
+        externalDocs:
+            description: "Find out more about channels in the Sylius documentation."
+            url: "http://docs.sylius.org/en/latest/book/configuration/channels.html"
+    currency:
+        description: "Code of the cart currency according to ISO 4217. This value is inherited from channel"
+        type: "string"
+        example: "GBP"
+    locale:
+        description: "Code of the cart locale. This value is inherited from channel"
+        type: "string"
+        example: "en_GB"
+    checkoutState:
+        description: "Current state of a checkout."
+        type: "string"
+        default: "cart"
+        externalDocs:
+            description: "Find out more about checkout states in the Sylius documentation."
+            url: "http://docs.sylius.org/en/latest/book/orders/checkout.html#checkout-state-machine"
+        enum:
+        - "cart"
+        - "addressed"
+        - "shipping_selected"
+        - "payment_selected"
+        - "completed"
+    items:
+        type: "array"
+        items:
+            $ref: '#/definitions/CartItem'
+    totals:
+        type: "object"
+        properties:
+            total:
+                description: "Total cost of the cart. The sum of all properties below."
+                type: "integer"
+                example: 0
+            items:
+                description: "Total cost of the cart items."
+                type: "integer"
+                example: 0
+            taxes:
+                description: "Total amount of cart taxes."
+                type: "integer"
+                example: 0
+            shipping:
+                description: "Total cost of the cart shipment."
+                type: "integer"
+                example: 0
+            promotion:
+                description: "Total amount of cart promotions."
+                type: "integer"
+                example: 0
+    shippingAddress:
+        type: "object"
+        $ref: "#/definitions/Address"
+    billingAddress:
+        type: "object"
+        $ref: "#/definitions/Address"
+    payments:
+        type: "array"
+        items:
+            type: "object"
+            properties:
+                state:
+                    description: "Current state of a payment."
+                    type: "string"
+                    default: "cart"
+                    externalDocs:
+                        description: "Find out more about payment states in the Sylius documentation."
+                        url: "http://docs.sylius.org/en/latest/book/orders/payments.html#payment-state-machine"
+                    enum:
+                    - "cart"
+                    - "new"
+                    - "processing"
+                    - "completed"
+                    - "failed"
+                    - "cancelled"
+                    - "refunded"
+                method:
+                    type: "object"
+                    $ref: "#/definitions/PaymentMethod"
+    shipments:
+        type: "array"
+        items:
+            type: "object"
+            properties:
+                state:
+                    description: "Current state of a shipment."
+                    type: "string"
+                    default: "cart"
+                    externalDocs:
+                        description: "Find out more about shipment states in the Sylius documentation."
+                        url: "http://docs.sylius.org/en/latest/book/orders/shipments.html#the-shipment-state-machine"
+                    enum:
+                    - "cart"
+                    - "ready"
+                    - "cancelled"
+                    - "shipped"
+                method:
+                    type: "object"
+                    $ref: "#/definitions/ShippingMethod"
+    cartDiscounts:
+        type: "array"
+        items:
+            type: "object"
+            properties:
+                additionalProperties:
+                    type: "object"
+                    $ref: "#/definitions/Discount"

@@ -1,0 +1,7 @@
+title: "TaxonDetails"
+type: "object"
+properties:
+    self:
+        $ref: '#/definitions/Taxon'
+    parentTree:
+        $ref: '#/definitions/Taxon'

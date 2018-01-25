@@ -1,0 +1,104 @@
+# Cart
+CartItem:
+    $ref: ./cart/CartItem.yaml
+
+Cart:
+    $ref: ./cart/Cart.yaml
+
+ChangeItemQuantityRequest:
+    $ref: ./cart/ChangeItemQuantityRequest.yaml
+
+PutItemsToCartRequest:
+    $ref: ./cart/PutItemsToCartRequest.yaml
+
+PutItemToCartRequest:
+    $ref: ./cart/PutItemToCartRequest.yaml
+
+PickupCartRequest:
+    $ref: ./cart/PickupCartRequest.yaml
+
+# Product
+AddReviewRequest:
+    $ref: ./product/AddReviewRequest.yaml
+
+Product:
+    $ref: ./product/Product.yaml
+
+Variant:
+    $ref: ./product/Variant.yaml
+
+Attribute:
+    $ref: ./product/Attribute.yaml
+
+Taxon:
+    $ref: ./product/Taxon.yaml
+
+TaxonDetails:
+    $ref: ./product/TaxonDetails.yaml
+
+ProductTaxon:
+    $ref: ./product/ProductTaxon.yaml
+
+ProductsPage:
+    $ref: ./product/ProductsPage.yaml
+
+ProductReviewsPage:
+    $ref: ./product/ProductReviewsPage.yaml
+
+ProductDetails:
+    $ref: ./product/ProductDetails.yaml
+
+Discount:
+    $ref: ./product/Discount.yaml
+
+Price:
+    $ref: ./product/Price.yaml
+
+# Checkout
+AddCouponRequest:
+    $ref: ./checkout/AddCouponRequest.yaml
+
+CheckoutAddressRequest:
+    $ref: ./checkout/CheckoutAddressRequest.yaml
+
+AvailablePaymentMethods:
+    $ref: ./checkout/AvailablePaymentMethods.yaml
+
+AvailableShippingMethods:
+    $ref: ./checkout/AvailableShippingMethods.yaml
+
+CheckoutChoosePaymentMethodRequest:
+    $ref: ./checkout/CheckoutChoosePaymentMethodRequest.yaml
+
+CheckoutChooseShippingMethodRequest:
+    $ref: ./checkout/CheckoutChooseShippingMethodRequest.yaml
+
+CheckoutCompleteRequest:
+    $ref: ./checkout/CheckoutCompleteRequest.yaml
+
+Address:
+    $ref: ./checkout/Address.yaml
+
+PaymentMethod:
+    $ref: ./checkout/PaymentMethod.yaml
+
+ShippingMethod:
+    $ref: ./checkout/ShippingMethod.yaml
+
+# Customer
+RequestPasswordResetting:
+    $ref: ./customer/RequestPasswordResetting.yaml
+
+LoggedInCustomerDetails:
+    $ref: ./customer/LoggedInCustomerDetails.yaml
+
+# Commons
+GeneralError:
+    $ref: ./commons/GeneralError.yaml
+
+Page:
+    $ref: ./commons/Page.yaml
+
+Image:
+    $ref: ./commons/Image.yaml
+

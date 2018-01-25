@@ -1,0 +1,9 @@
+title: "ChangeItemQuantityRequest"
+type: "object"
+description: "Body of request used to change quantity of an item."
+required:
+- "quantity"
+properties:
+    quantity:
+        type: "integer"
+        example: 2

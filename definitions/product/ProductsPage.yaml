@@ -1,0 +1,9 @@
+title: "ProductsPage"
+allOf:
+- $ref: '#/definitions/Page'
+- type: object
+  properties:
+      items:
+          type: "array"
+          items:
+              $ref: '#/definitions/Product'

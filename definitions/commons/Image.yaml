@@ -1,0 +1,9 @@
+title: "Image"
+type: "object"
+properties:
+    code:
+        type: "string"
+        example: "thumbnail"
+    path:
+        type: "string"
+        example: "/uo/mug.jpg"

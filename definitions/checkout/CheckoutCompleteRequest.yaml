@@ -1,0 +1,14 @@
+title: "CheckoutCompleteRequest"
+type: "object"
+description: "Body of request used to complete checkout."
+required:
+- "email"
+properties:
+    email:
+        type: "string"
+        description: "Email of a customer."
+        example: "customer@example.com"
+    notes:
+        type: "string"
+        description: "Additional notes."
+        example: "I'm only available between 3 and 8 PM."

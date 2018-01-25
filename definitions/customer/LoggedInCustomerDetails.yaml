@@ -1,0 +1,12 @@
+title: "LoggedInCustomerDetails"
+type: "object"
+properties:
+    firstName:
+        type: "string"
+        example: "Sherlock"
+    lastName:
+        type: "string"
+        example: "Holmes"
+    email:
+        type: "string"
+        example: "sherlock@holmes.com"

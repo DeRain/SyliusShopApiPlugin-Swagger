@@ -1,0 +1,66 @@
+parameters:
+- name: "token"
+  in: "path"
+  description: "Cart identifier."
+  required: true
+  type: "string"
+post:
+    tags:
+    - "cart"
+    summary: "Pick up your cart from the store"
+    description: "This endpoint will allow you to assign a new cart to the provided token. We recommend using UUID as a token to avoid duplication. If any of previous carts or orders already have the same token value an exception will be thrown."
+    operationId: "cartPickUp"
+    consumes:
+    - "application/json"
+    produces:
+    - "application/json"
+    parameters:
+    - in: "body"
+      name: "content"
+      description: "Contains an information about the channel which should be associated with the newly created cart"
+      required: true
+      schema:
+        $ref: "#/definitions/PickupCartRequest"
+    responses:
+        201:
+            description: "Cart has been picked up and assigned to given token"
+        400:
+            description: "Invalid input"
+            schema:
+                $ref: "#/definitions/GeneralError"
+get:
+    tags:
+    - "cart"
+    summary: "Show summarized cart."
+    description: "This endpoint shows you the current calculated state of cart."
+    operationId: "cartSummarize"
+    consumes:
+    - "application/json"
+    produces:
+    - "application/json"
+    responses:
+        200:
+            description: "Current state of the cart, with calculated prices and related items."
+            schema:
+                $ref: "#/definitions/Cart"
+        400:
+            description: "Invalid input (E.g. token has not been found)"
+            schema:
+                $ref: "#/definitions/GeneralError"
+delete:
+    tags:
+    - "cart"
+    summary: "Drop your cart."
+    description: "This endpoint will remove the cart and all of the related cart items."
+    operationId: "cartDrop"
+    consumes:
+    - "application/json"
+    produces:
+    - "application/json"
+    responses:
+        204:
+            description: "Cart has been dropped."
+        400:
+            description: "Invalid input (E.g. token has not been found)"
+            schema:
+                $ref: "#/definitions/GeneralError"

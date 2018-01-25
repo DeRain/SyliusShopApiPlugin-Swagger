@@ -1,0 +1,69 @@
+# Cart
+'/carts/{token}':
+    $ref: ./cart/carts-token.yaml
+
+'/carts/{token}/items':
+    $ref: ./cart/carts-token-items.yaml
+
+'/carts/{token}/multiple-items':
+    $ref: ./cart/carts-token-multiple-items.yaml
+
+'/carts/{token}/items/{identifier}':
+    $ref: ./cart/carts-token-items-identifier.yaml
+
+'/carts/{token}/coupon':
+    $ref: ./cart/carts-token-coupon.yaml
+
+# Checkout
+'/checkout/{token}':
+    $ref: ./checkout/checkout-token.yaml
+
+'/checkout/{token}/address':
+    $ref: ./checkout/checkout-token-address.yaml
+
+'/checkout/{token}/shipping/':
+    $ref: ./checkout/checkout-token-shipping.yaml
+
+'/checkout/{token}/shipping/{id}':
+    $ref: ./checkout/checkout-token-shipping-id.yaml
+
+'/checkout/{token}/payment/':
+    $ref: ./checkout/checkout-token-payment.yaml
+
+'/checkout/{token}/payment/{id}':
+    $ref: ./checkout/checkout-token-payment-id.yaml
+
+'/checkout/{token}/complete':
+    $ref: ./checkout/checkout-token-complete.yaml
+
+# Product
+'/taxon-products-by-slug/{slug}':
+    $ref: ./product/taxon-products-by-slug.yaml
+
+'/taxon-products/{code}':
+    $ref: ./product/taxon-products-code.yaml
+
+'/products-by-slug/{slug}':
+    $ref: ./product/products-by-slug.yaml
+
+'/products/{code}':
+    $ref: ./product/products-code.yaml
+
+'/product-reviews-by-slug/{slug}':
+    $ref: ./product/product-reviews-by-slug.yaml
+
+'/product/{code}/reviews':
+    $ref: ./product/product-code-reviews.yaml
+
+'/taxons':
+    $ref: ./product/taxons.yaml
+
+'/taxons/{code}':
+    $ref: ./product/taxons-code.yaml
+
+# Customer
+'/request-password-reset':
+    $ref: ./customer/request-password-reset.yaml
+
+'/me':
+    $ref: ./customer/me.yaml

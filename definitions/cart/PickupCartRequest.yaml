@@ -1,0 +1,9 @@
+title: "PickupCartRequest"
+type: "object"
+description: "Body of request with a channel code."
+required:
+- "channel"
+properties:
+    channel:
+        type: "string"
+        example: "WEB_GB"

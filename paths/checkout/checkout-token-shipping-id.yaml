@@ -1,0 +1,33 @@
+put:
+    tags:
+    - "checkout"
+    summary: "Choosing a cart shipping method."
+    description: "This endpoint will allow you to choose a cart shipping method."
+    operationId: "checkoutChooseShippingMethod"
+    consumes:
+    - "application/json"
+    produces:
+    - "application/json"
+    parameters:
+    - name: "token"
+      in: "path"
+      description: "Cart identifier."
+      required: true
+      type: "string"
+    - name: "id"
+      in: "path"
+      description: "Order number of shipment for which shipping method should be specified."
+      required: true
+      type: "string"
+    - in: "body"
+      name: "content"
+      required: true
+      schema:
+          $ref: "#/definitions/CheckoutChooseShippingMethodRequest"
+    responses:
+        204:
+            description: "Shipping method has been chosen."
+        400:
+            description: "Invalid input, validation failed."
+            schema:
+                $ref: "#/definitions/GeneralError"

@@ -1,0 +1,49 @@
+parameters:
+- name: "token"
+  in: "path"
+  description: "Cart identifier."
+  required: true
+  type: "string"
+- name: "identifier"
+  in: "path"
+  description: "Identifier of a specific item. Can be found in the cart summary."
+  required: true
+  type: "string"
+put:
+    tags:
+    - "cart"
+    summary: "Change quantity of a cart item."
+    operationId: "cartChangeItemQuantity"
+    consumes:
+    - "application/json"
+    produces:
+    - "application/json"
+    parameters:
+    - in: "body"
+      name: "content"
+      required: true
+      schema:
+        $ref: "#/definitions/ChangeItemQuantityRequest"
+    responses:
+        204:
+            description: "Quantity has been changed."
+        400:
+            description: "Invalid input, validation failed."
+            schema:
+                $ref: "#/definitions/GeneralError"
+delete:
+    tags:
+    - "cart"
+    summary: "Remove cart item."
+    description: "This endpoint will remove one item from your cart"
+    consumes:
+    - "application/json"
+    produces:
+    - "application/json"
+    responses:
+        204:
+            description: "Cart item has been removed."
+        400:
+            description: "Invalid input (E.g. token has not been found)"
+            schema:
+                $ref: "#/definitions/GeneralError"

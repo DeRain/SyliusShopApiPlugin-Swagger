@@ -1,0 +1,23 @@
+title: "PutItemToCartRequest"
+type: "object"
+description: "Body of request used to put item to the cart."
+required:
+- "productCode"
+properties:
+    productCode:
+        type: "string"
+        example: "LOGAN_HAT_CODE"
+    quantity:
+        type: "integer"
+        minimum: 1
+        example: 3
+        default: 1
+    variantCode:
+        type: "string"
+        example: "SMALL_LOGAN_T_SHIRT_CODE"
+    options:
+        type: "object"
+        description: "Keys reference to the code of an option and values to the code of option value."
+        additionalProperties:
+            type: "string"
+            example: "HAT_SIZE_S"

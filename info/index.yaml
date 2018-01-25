@@ -1,0 +1,8 @@
+description: "Sylius Shop API documentation"
+version: "1.0.0"
+title: "Sylius Shop API"
+contact:
+    email: "lukasz.chrusciel@sylius.com"
+license:
+    name: "MIT"
+    url: "https://opensource.org/licenses/MIT"

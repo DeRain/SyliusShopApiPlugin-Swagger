@@ -1,0 +1,12 @@
+title: "PaymentMethod"
+type: "object"
+properties:
+    code:
+        type: "string"
+        example: "PBC"
+    name:
+        type: "string"
+        example: "Pay by check"
+    description:
+        type: "string"
+        example: "Some strange description."

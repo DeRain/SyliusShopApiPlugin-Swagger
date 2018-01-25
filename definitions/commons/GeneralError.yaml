@@ -1,0 +1,17 @@
+title: "GeneralError"
+type: "object"
+properties:
+    code:
+        type: "integer"
+        example: 400
+    message:
+        type: "string"
+        example: "Validation failed"
+    errors:
+        description: "Keys reference to the fields where the error occurred."
+        type: "object"
+        additionalProperties:
+            type: "array"
+            items:
+                type: "string"
+                example: "sylius.shop_api.additionalProp.not_null"

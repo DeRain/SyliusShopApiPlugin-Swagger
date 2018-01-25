@@ -1,0 +1,6 @@
+title: "PutItemsToCartRequest"
+type: "array"
+description: "Body of request used to put item to the cart."
+items:
+    type: "object"
+    $ref: "#/definitions/PutItemToCartRequest"

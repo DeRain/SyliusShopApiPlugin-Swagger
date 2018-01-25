@@ -1,0 +1,12 @@
+title: "AvailableShippingMethods"
+type: "object"
+description: "Available shipping methods for each shipment."
+properties:
+    shipments:
+        type: "array"
+        items:
+            type: "object"
+            properties:
+                methods:
+                    type: "object"
+                    $ref: "#/definitions/ShippingMethod"

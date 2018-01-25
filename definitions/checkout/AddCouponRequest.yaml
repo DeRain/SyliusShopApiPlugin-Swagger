@@ -1,0 +1,9 @@
+title: "AddCouponRequest"
+type: "object"
+description: "Body of request used to add promotion coupon code to cart."
+required:
+- "coupon"
+properties:
+    coupon:
+        type: "string"
+        example: "BANANAS"

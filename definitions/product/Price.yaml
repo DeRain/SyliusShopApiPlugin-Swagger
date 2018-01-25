@@ -1,0 +1,10 @@
+title: "Price"
+type: object
+properties:
+    current:
+        description: "Calculated price for given channel. Price is stored as an integer, so by default it should be divided by 100."
+        type: "integer"
+        example: 1000
+    currency:
+        type: "string"
+        example: "PLN"

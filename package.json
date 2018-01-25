@@ -1,0 +1,24 @@
+{
+  "name": "sylius-shop-api",
+  "version": "1.0.0",
+  "description": "Sylius Shop API documentation",
+  "main": "generate-swagger-json.js",
+  "dependencies": {
+    "json-refs": "^2.1.6",
+    "jsonfile": "^2.4.0",
+    "yaml-js": "^0.1.4"
+  },
+  "scripts": {
+    "generate-swagger-json": "node generate-swagger-json.js"
+  },
+  "devDependencies": {
+    "shared-git-hooks": "^1.2.1"
+  },
+  "keywords": [
+    "api",
+    "doc",
+    "SyliusShopApi"
+  ],
+  "author": "Kirill Beresnev <derainberk@gmail.com>",
+  "license": "MIT"
+}

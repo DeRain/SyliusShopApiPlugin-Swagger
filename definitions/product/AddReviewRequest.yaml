@@ -1,0 +1,26 @@
+title: "AddReviewRequest"
+type: "object"
+description: "Body of request with a channel code."
+required:
+- "channelCode"
+- "title"
+- "rating"
+- "comment"
+- "email"
+properties:
+    channelCode:
+        type: "string"
+        example: "WEB_GB"
+    title:
+        type: "string"
+        example: "Awesome product"
+    rating:
+        type: "integer"
+        example: 5
+    comment:
+        type: "string"
+        example: "If I were a mug, I would like to be like this one!"
+    email:
+        type: "string"
+        description: "Email of an author."
+        example: "customer@example.com"

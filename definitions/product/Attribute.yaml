@@ -1,0 +1,12 @@
+title: "Attribute"
+type: "object"
+properties:
+    code:
+        type: "string"
+        example: "MUG_MATERIAL_CODE"
+    name:
+        type: "string"
+        example: "Mug material"
+    value:
+        type: "string"
+        example: "Wood"

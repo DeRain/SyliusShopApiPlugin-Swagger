@@ -1,0 +1,24 @@
+title: "Taxon"
+type: "object"
+properties:
+    code:
+        type: "string"
+        example: "CATEGORIES_CODE"
+    name:
+        type: "string"
+        example: "Categories"
+    slug:
+        type: "string"
+        example: "categories"
+    description:
+        type: "string"
+        example: "General category for all products."
+    children:
+        type: "array"
+        description: "Based on this tree one can build a breadcrumb on a frontend. Otherwise (e.g. presenting a tree of all taxons) children will contain all children of given taxon."
+        items:
+            $ref: '#/definitions/Taxon'
+    images:
+        type: "array"
+        items:
+            $ref: '#/definitions/Image'

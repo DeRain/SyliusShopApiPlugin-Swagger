@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  tractor-swagger-ui:
+    image: swaggerapi/swagger-ui:latest
+    ports:
+     - "8080:8080"
+    volumes:
+     - ./:/usr/share/nginx/html/swagger/

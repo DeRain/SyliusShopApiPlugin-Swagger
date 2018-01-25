@@ -1,0 +1,14 @@
+title: "AvailablePaymentMethods"
+type: "object"
+description: "Available payment methods for each payment."
+properties:
+    payments:
+        type: "array"
+        items:
+            type: "object"
+            properties:
+                methods:
+                    type: "object"
+                    additionalProperties:
+                        type: "object"
+                        $ref: "#/definitions/PaymentMethod"

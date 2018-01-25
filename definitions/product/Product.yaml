@@ -1,0 +1,40 @@
+title: "Product"
+type: "object"
+description: "Product with its basic information, variants, attributes, association and images."
+properties:
+    code:
+        type: "string"
+        example: "LOGAN_MUG_CODE"
+    name:
+        type: "string"
+        example: "Logan Mug"
+    slug:
+        type: "string"
+        example: "logan-mug"
+    averageRating:
+        type: "integer"
+        example: 4.5
+    taxons:
+        $ref: '#/definitions/ProductTaxon'
+    variants:
+        description: "Keys reference to code of a variant."
+        type: "object"
+        additionalProperties:
+            type: "array"
+            items:
+                $ref: '#/definitions/Variant'
+    attributes:
+        type: "array"
+        items:
+            $ref: '#/definitions/Attribute'
+    associations:
+        description: "Keys reference to code of an association."
+        type: "object"
+        additionalProperties:
+            type: "array"
+            items:
+                $ref: '#/definitions/Product'
+    images:
+        type: "array"
+        items:
+            $ref: '#/definitions/Image'

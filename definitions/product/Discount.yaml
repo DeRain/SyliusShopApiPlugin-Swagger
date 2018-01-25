@@ -1,0 +1,9 @@
+title: "Discount"
+type: "object"
+properties:
+    name:
+        description: "Name of promotion."
+        type: "string"
+        example: "Summer sale"
+    amount:
+        $ref: '#/definitions/Price'

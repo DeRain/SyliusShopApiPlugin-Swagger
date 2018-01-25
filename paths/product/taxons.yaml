@@ -1,0 +1,24 @@
+get:
+    tags:
+    - "taxons"
+    summary: "Show taxon tree."
+    description: "This endpoint will return an array of all available taxon roots with all of its children."
+    operationId: "taxonTree"
+    consumes:
+    - "application/json"
+    produces:
+    - "application/json"
+    parameters:
+    - in: "query"
+      name: "locale"
+      description: "Locale in which taxons should be shown. Example: en_GB"
+      required: false
+      type: "string"
+    responses:
+        200:
+            description: "Array of all available taxons."
+            schema:
+                type: "array"
+                items:
+                    type: "object"
+                    $ref: "#/definitions/Taxon"

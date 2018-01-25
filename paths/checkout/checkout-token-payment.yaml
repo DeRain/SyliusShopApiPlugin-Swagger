@@ -1,0 +1,25 @@
+get:
+    tags:
+    - "checkout"
+    summary: "Get available payment methods."
+    description: "This endpoint will show you available payment methods for all cart payments."
+    operationId: "checkoutShowAvailablePaymentMethods"
+    consumes:
+    - "application/json"
+    produces:
+    - "application/json"
+    parameters:
+    - name: "token"
+      in: "path"
+      description: "Cart identifier."
+      required: true
+      type: "string"
+    responses:
+        200:
+            description: "OK"
+            schema:
+                $ref: "#/definitions/AvailablePaymentMethods"
+        400:
+            description: "Invalid input, validation failed."
+            schema:
+                $ref: "#/definitions/GeneralError"

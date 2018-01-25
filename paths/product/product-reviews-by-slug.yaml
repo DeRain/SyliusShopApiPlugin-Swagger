@@ -1,0 +1,51 @@
+parameters:
+- name: "slug"
+  in: "path"
+  description: "Slug of expected product. Example: king-arthurs-mug"
+  required: true
+  type: "string"
+post:
+    tags:
+    - "products"
+    summary: "Add a review to the product."
+    description: "This endpoint will allow you to add a new review to the product. Remember, that it should be accepted by an administrator before it will be available in the review list."
+    operationId: "productAddReviewBySlug"
+    consumes:
+    - "application/json"
+    produces:
+    - "application/json"
+    parameters:
+    - in: "body"
+      name: "content"
+      required: true
+      schema:
+          $ref: "#/definitions/AddReviewRequest"
+    responses:
+        201:
+            description: "Review has been added to the product."
+        400:
+            description: "Invalid input, validation failed."
+            schema:
+                $ref: "#/definitions/GeneralError"
+get:
+    tags:
+    - "products"
+    summary: "Show reviews."
+    description: "This endpoint will return a paginated list of all reviews related to the product identified by slug."
+    operationId: "productReviewsBySlug"
+    consumes:
+    - "application/json"
+    produces:
+    - "application/json"
+    parameters:
+    - name: "channel"
+      in: "query"
+      description: "Channel from which products should be gathered. Example: en_GB"
+      required: true
+      type: "string"
+    responses:
+        200:
+            description: "Ok"
+            schema:
+                type: "object"
+                $ref: "#/definitions/ProductReviewsPage"

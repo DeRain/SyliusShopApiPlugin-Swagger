@@ -1,0 +1,13 @@
+get:
+    tags:
+    - "users"
+    summary: "Provides currently logged in user details."
+    operationId: "me"
+    responses:
+        200:
+            description: "Success"
+            schema:
+                type: "object"
+                $ref: "#/definitions/LoggedInCustomerDetails"
+        500:
+            description: "There is no currently logged in user."

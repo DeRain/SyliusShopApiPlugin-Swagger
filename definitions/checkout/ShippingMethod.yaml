@@ -1,0 +1,14 @@
+title: "ShippingMethod"
+type: "object"
+properties:
+    code:
+        type: "string"
+        example: "DHL"
+    name:
+        type: "string"
+        example: "DHL Delivery"
+    description:
+        type: "string"
+        example: "DHL Delivery will deliver your parcel even next day!"
+    price:
+        $ref: '#/definitions/Price'

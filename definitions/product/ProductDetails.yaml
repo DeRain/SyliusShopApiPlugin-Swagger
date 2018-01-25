@@ -1,0 +1,8 @@
+title: "ProductDetails"
+allOf:
+- $ref: '#/definitions/Product'
+- type: object
+  properties:
+      breadcrumb:
+          type: "string"
+          example: "categories/mugs/logan-mug"

@@ -1,0 +1,12 @@
+title: "CheckoutAddressRequest"
+type: "object"
+description: "Body of request used for cart addressing."
+required:
+- "shippingAddress"
+properties:
+    shippingAddress:
+        type: "object"
+        $ref: "#/definitions/Address"
+    billingAddress:
+        type: "object"
+        $ref: "#/definitions/Address"

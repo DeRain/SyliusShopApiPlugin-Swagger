@@ -1,0 +1,27 @@
+title: "Variant"
+type: "object"
+description: "If the product is simple it will have only one variant with the same code and name. Otherwise, the product can have a list of variants with different fields."
+properties:
+    code:
+        type: "string"
+        example: "LOGAN_MUG_CODE"
+    name:
+        type: "string"
+        example: "Logan Mug"
+    axis:
+            type: "array"
+            description: "List of codes of associated product options."
+            items:
+                type: "string"
+                example: "HAT_SIZE_S"
+    nameAxis:
+        description: "Map of keys from previous field to translated values of given variant."
+        type: "object"
+        additionalProperties:
+            type: "string"
+    price:
+        $ref: '#/definitions/Price'
+    images:
+        type: "array"
+        items:
+            $ref: '#/definitions/Image'

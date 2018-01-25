@@ -1,0 +1,32 @@
+get:
+    tags:
+    - "products"
+    summary: "Show a product with the given slug."
+    description: "This endpoint will return a product with the given slug."
+    operationId: "productDetailsBySlug"
+    consumes:
+    - "application/json"
+    produces:
+    - "application/json"
+    parameters:
+    - name: "slug"
+      in: "path"
+      description: "Slug of expected product. Example: king-arthurs-mug"
+      required: true
+      type: "string"
+    - name: "channel"
+      in: "query"
+      description: "Channel from which products should be gathered. Example: en_GB"
+      required: true
+      type: "string"
+    - name: "locale"
+      in: "query"
+      description: "Locale in which products should be shown. Example: en_GB"
+      required: false
+      type: "string"
+    responses:
+        200:
+            description: "OK"
+            schema:
+                type: "object"
+                $ref: "#/definitions/ProductDetails"

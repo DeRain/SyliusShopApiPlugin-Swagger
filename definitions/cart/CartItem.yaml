@@ -1,0 +1,15 @@
+title: "CartItem"
+type: "object"
+description: "Cart item with calculated prices, quantity and related product."
+properties:
+    id:
+        type: "integer"
+        example: 1
+    quantity:
+        type: "integer"
+        example: 2
+    total:
+        type: "object"
+        example: 1000
+    product:
+        $ref: '#/definitions/Product'
